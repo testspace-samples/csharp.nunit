@@ -13,4 +13,7 @@ TestResult.xml
 # mstest test results
 TestResults
 
+# open cover results
+codecoverage.xml
+
 packages
