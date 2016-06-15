@@ -22,7 +22,7 @@ test_script:
     .\money\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -target:".\money\packages\NUnit.ConsoleRunner.3.2.1\tools\nunit3-console.exe" -targetargs:'.\money\bin\Debug\cs-money.dll' -output:'.\codecoverage.xml' -register:user
 
 
-    .\money\packages\testspace\testspace.exe publish .\testresult.xml .\codecoverage.xml ${ENV:testspace_token}:@jschultz.testspace.com/my-project/Nunit
+    .\money\packages\testspace\testspace.exe publish .\testresult.xml .\codecoverage.xml ${ENV:testspace_token}:@samples.testspace.com/csharp/NUnit
 
 
     # upload results to AppVeyor
