@@ -3,7 +3,7 @@
 
 ## C#/NUnit sample for demonstrating Testspace
 
-This is the sample application for the [NUnit](http://nunit.org/) using C# examples [examples](https://github.com/nunit/nunit-csharp-samples). It is being used to demonstrate Testspace usage models for easier test content management.
+This is the sample application for the [NUnit](http://nunit.org/) using C#  [examples](https://github.com/nunit/nunit-csharp-samples). It is being used to demonstrate Testspace usage models for easier test content management.
 
 [![Build status](https://ci.appveyor.com/api/projects/status/x76ee4x2hc84l55a?svg=true)](https://ci.appveyor.com/project/jeffs-s2/csharp-nunit)
 [![Space Health](https://samples.testspace.com/projects/94/spaces/343/badge)](https://samples.testspace.com/projects/94/spaces/343 "Test Cases")
@@ -13,7 +13,7 @@ This is the sample application for the [NUnit](http://nunit.org/) using C# examp
 
 ***
 
-We made a few minor modifications for reporting purposes. In order to run this sample you will need a host workstation with Visual Studio and the  [Nunit test framework](http://nunit.org/).
+We made a few minor modifications for reporting purposes. In order to run this sample you will need a host workstation with Visual Studio the [Nunit](http://nunit.org/) test framework and the [OpenCover](https://github.com/OpenCover/opencover) coverage tool.
 
 Publishing results example:
 
@@ -23,7 +23,7 @@ OpenCover.Console.exe -target:nunit3-console.exe -targetargs:cs-money.dll -outpu
 testspace publish TestResult.xml codecoverage.xml
 </pre>
 
-To fork this example using Travis requires:
+To fork this example using AppVeyor requires:
   - Account at www.testspace.com.
   - AppVeyor Environment Variable:
     - `TESTSPACE_URL` = `credentials:@my-org-name.testspace.com/my-project/my-space`
