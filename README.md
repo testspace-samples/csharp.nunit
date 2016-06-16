@@ -3,7 +3,7 @@
 
 ## C#/NUnit sample for demonstrating Testspace
 
-This is the sample application for the [NUnit](http://nunit.org/) using C#  [examples](https://github.com/nunit/nunit-csharp-samples). It is being used to demonstrate Testspace usage models for easier test content management.
+This is a sample for the use of the [NUnit](http://nunit.org/) test framework using C#  [examples](https://github.com/nunit/nunit-csharp-samples). It is used to demonstrate Testspace usage models for easier test content management.
 
 [![Build status](https://ci.appveyor.com/api/projects/status/x76ee4x2hc84l55a?svg=true)](https://ci.appveyor.com/project/jeffs-s2/csharp-nunit)
 [![Space Health](https://samples.testspace.com/projects/94/spaces/343/badge)](https://samples.testspace.com/projects/94/spaces/343 "Test Cases")
@@ -13,7 +13,7 @@ This is the sample application for the [NUnit](http://nunit.org/) using C#  [exa
 
 ***
 
-We made a few minor modifications for reporting purposes. In order to run this sample you will need a host workstation with Visual Studio the [Nunit](http://nunit.org/) test framework and the [OpenCover](https://github.com/OpenCover/opencover) coverage tool.
+We have made a few minor modifications to to original samples for reporting purposes. In order to run this sample you will need a host workstation with Visual Studio, the [Nunit](http://nunit.org/) test framework and the [OpenCover](https://github.com/OpenCover/opencover) coverage tool.
 
 Publishing results example:
 
@@ -22,6 +22,8 @@ OpenCover.Console.exe -target:nunit3-console.exe -targetargs:cs-money.dll -outpu
 
 testspace publish TestResult.xml codecoverage.xml
 </pre>
+
+Checkout the [Space](https://samples.testspace.com/projects/charp/spaces/nunit).
 
 To fork this example using AppVeyor requires:
   - Account at www.testspace.com.
