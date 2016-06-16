@@ -23,7 +23,7 @@ OpenCover.Console.exe -target:nunit3-console.exe -targetargs:cs-money.dll -outpu
 testspace publish TestResult.xml codecoverage.xml
 </pre>
 
-Checkout the [Space](https://samples.testspace.com/projects/charp/spaces/nunit).
+Checkout the [Space](https://samples.testspace.com/projects/csharp/spaces/nunit).
 
 To fork this example using AppVeyor requires:
   - Account at www.testspace.com.
