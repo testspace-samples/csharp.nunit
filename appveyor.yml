@@ -16,7 +16,7 @@ build:
   verbosity: minimal
 test_script:
 - ps: >-
-    .\money\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -target:".\money\packages\NUnit.ConsoleRunner.3.2.1\tools\nunit3-console.exe" -targetargs:'.\money\bin\Debug\cs-money.dll' -output:'.\codecoverage.xml' -filter:'+[*]* -[*]*MoneyTest*' -register:user
+    .\money\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -target:".\money\packages\NUnit.ConsoleRunner.3.2.1\tools\nunit3-console.exe" -targetargs:'.\money\bin\Debug\cs-money.dll' -output:'.\coverage.xml' -filter:'+[*]* -[*]*MoneyTest*' -register:user
 
 
-    .\money\packages\testspace\testspace.exe publish .\testresult.xml .\codecoverage.xml "${ENV:TESTSPACE_URL}"
+    .\money\packages\testspace\testspace.exe publish .\testresult.xml .\coverage.xml "${ENV:TESTSPACE_URL}"
