@@ -7,9 +7,9 @@ This is a sample for the use of the [NUnit](http://nunit.org/) test framework us
 
 [![Build status](https://ci.appveyor.com/api/projects/status/x76ee4x2hc84l55a?svg=true)](https://ci.appveyor.com/project/jeffs-s2/csharp-nunit)
 [![Space Health](https://samples.testspace.com/projects/94/spaces/343/badge)](https://samples.testspace.com/projects/94/spaces/343 "Test Cases")
-[![Space Metric](https://samples.testspace.com/projects/94/spaces/343/metrics/283/badge)](https://samples.testspace.com/spaces/343/schema/codecoverage "Branch/Condition Coverage")
-[![Space Metric](https://samples.testspace.com/projects/94/spaces/343/metrics/285/badge)](https://samples.testspace.com/spaces/343/schema/codecoverage "Function/Method Coverage")
-[![Space Metric](https://samples.testspace.com/projects/94/spaces/343/metrics/284/badge)](https://samples.testspace.com/spaces/343/schema/codecoverage "Line/Statement Coverage")
+[![Space Metric](https://samples.testspace.com/projects/94/spaces/343/metrics/287/badge)](https://samples.testspace.com/spaces/343/schema/coverage "Branch/Condition Coverage")
+[![Space Metric](https://samples.testspace.com/projects/94/spaces/343/metrics/289/badge)](https://samples.testspace.com/spaces/343/schema/coverage "Function/Method Coverage")
+[![Space Metric](https://samples.testspace.com/projects/94/spaces/343/metrics/288/badge)](https://samples.testspace.com/spaces/343/schema/coverage "Line/Statement Coverage")
 
 ***
 
