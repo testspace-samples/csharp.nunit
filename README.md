@@ -7,10 +7,10 @@ This is a sample for the use of the [NUnit](http://nunit.org/) test framework us
 
 [![Build status](https://ci.appveyor.com/api/projects/status/x76ee4x2hc84l55a?svg=true)](https://ci.appveyor.com/project/jeffs-s2/csharp-nunit)
 [![Space Health](https://samples.testspace.com/projects/94/spaces/343/badge)](https://samples.testspace.com/projects/94/spaces/343 "Test Cases")
-[![Space Metric](https://samples.testspace.com/projects/94/spaces/343/metrics/287/badge)](https://samples.testspace.com/spaces/343/schema/coverage "Branch/Condition Coverage")
-[![Space Metric](https://samples.testspace.com/projects/94/spaces/343/metrics/289/badge)](https://samples.testspace.com/spaces/343/schema/coverage "Function/Method Coverage")
-[![Space Metric](https://samples.testspace.com/projects/94/spaces/343/metrics/288/badge)](https://samples.testspace.com/spaces/343/schema/coverage "Line/Statement Coverage")
-
+[![Space Metric](https://samples.testspace.com/projects/94/spaces/343/metrics/217/badge)](https://samples.testspace.com/spaces/343/schema/Code%20Coverage "Code Coverage (branches)")
+[![Space Metric](https://samples.testspace.com/projects/94/spaces/343/metrics/218/badge)](https://samples.testspace.com/spaces/343/schema/Code%20Coverage "Code Coverage (methods)")
+[![Space Metric](https://samples.testspace.com/projects/94/spaces/343/metrics/219/badge)](https://samples.testspace.com/spaces/343/schema/Code%20Coverage "Code Coverage (sequences)")
+[![Space Metric](https://samples.testspace.com/projects/94/spaces/343/metrics/220/badge)](https://samples.testspace.com/spaces/343/schema/Static%20Analysis "Static Analysis (issues)")
 ***
 
 We have made a few minor modifications to to original samples for reporting purposes. In order to run this sample you will need a host workstation with Visual Studio, the [Nunit](http://nunit.org/) test framework and the [OpenCover](https://github.com/OpenCover/opencover) coverage tool.
