@@ -24,7 +24,7 @@ In order to run this sample you will need a host workstation with Visual Studio,
 Building with static analysis:
 
 <pre>
-    msbuild money/cs-money.csproj  /p:runCodeAnalysis=true /p:codeanalysislogfile=StaticAnalysis.xml
+msbuild money/cs-money.csproj  /p:runCodeAnalysis=true /p:codeanalysislogfile=StaticAnalysis.xml
 </pre>
 Running tests with code coverage:
 
