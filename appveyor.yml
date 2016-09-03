@@ -6,16 +6,16 @@ install:
 
     mkdir .\money\packages\testspace
 
-    wget https://testspace-runner.s3.amazonaws.com/testspace-windows-latest.zip -outfile .\money\packages\testspace.zip
+    wget https://testspace-client.s3.amazonaws.com/testspace-windows.zip -outfile .\money\packages\testspace.zip
 
     7z x .\money\packages\testspace.zip -omoney\packages\testspace
-before_build:
-- cmd: nuget restore money/cs-money.sln
-build:
-  project: money/cs-money.sln
-  verbosity: minimal
+build_script:
+- ps: >-
+    nuget restore money/cs-money.sln
+
+    msbuild money/cs-money.csproj /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" /p:runCodeAnalysis=true /p:codeanalysislogfile=StaticAnalysis.xml
 test_script:
 - ps: >-
     .\money\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -target:".\money\packages\NUnit.ConsoleRunner.3.2.1\tools\nunit3-console.exe" -targetargs:'.\money\bin\Debug\cs-money.dll' -output:'.\coverage.xml' -filter:'+[*]* -[*]*MoneyTest*' -register:user
 
-    .\money\packages\testspace\testspace.exe publish .\testresult.xml .\coverage.xml "${ENV:TESTSPACE_URL}"
+    .\money\packages\testspace\testspace.exe publish .\testresult.xml .\coverage.xml .\money\staticanalysis.xml "${ENV:TESTSPACE_URL}"
