@@ -8,7 +8,8 @@ This sample demonstrates techniques for using Testspace with C# code and the [NU
 ***
 Build using AppVeyor's Online CI:
 
-[![Build status](https://ci.appveyor.com/api/projects/status/x76ee4x2hc84l55a?svg=true)](https://ci.appveyor.com/project/jeffs-s2/csharp-nunit)
+[![Build status](https://ci.appveyor.com/api/projects/status/78g1co48hr5xq7wd?svg=true)](https://ci.appveyor.com/project/munderseth/csharp-nunit-mffbo)
+
 ***
 Publishing **Test Content** using www.testspace.com.
 
@@ -24,28 +25,27 @@ In order to run this sample you will need a host workstation with Visual Studio,
 Building with static analysis:
 
 <pre>
-msbuild money/cs-money.csproj  /p:runCodeAnalysis=true /p:codeanalysislogfile=StaticAnalysis.xml
+msbuild money\cs-money.csproj /p:platform=anycpu /p:configuration=debug /p:runCodeAnalysis=true /p:codeanalysislogfile=..\analysis.xml
 </pre>
 Running tests with code coverage:
 
 <pre>
-OpenCover.Console.exe -target:nunit3-console.exe -targetargs:cs-money.dll -output:codecoverage.xml -register:user
-
+OpenCover.Console -target:"nunit3-console.exe" -targetargs:"cs-money.dll" -output:"coverage.xml" -filter:"+[*]* -[*]*MoneyTest*" -register:user
 </pre>
 
-Publishing Results using **Testspace** in powershell:
+Publishing Test Content using **Testspace**:
 
 <pre>
-wget https://testspace-client.s3.amazonaws.com/testspace-windows.zip -outfile .\money\packages\testspace.zip
-extract to preferred location
-testspace .\testresult.xml .\coverage.xml money\staticanalysis.xml ${ENV:TESTSPACE_TOKEN}/${ENV:BRANCH_NAME}
+curl -fsS -o testspace-windows.zip https://testspace-client.s3.amazonaws.com/testspace-windows.zip
+7z x -y .\testspace-windows.zip
+estspace publish analysis.xml [Tests]TestResult.xml coverage.xml "master"
 </pre>
 
-Checkout the [Space](https://samples.testspace.com/projects/csharp/spaces/nunit).
+Checkout the [Testspace Project](https://samples.testspace.com/projects/csharp.nunit).
 
 To fork this example using AppVeyor requires:
   - Account at www.testspace.com.
   - AppVeyor Environment Variable:
-    - `TESTSPACE_URL` = `credentials:@my-org-name.testspace.com/my-project/my-space`
+    - `TESTSPACE_TOKEN` = `credentials:@my-org-name.testspace.com/my-project`
     - `credentials` set to `username:password` or your [access token](http://help.testspace.com/using-your-organization:user-settings).
-    - `my-org-name.testspace.com/my-project/my-space` based on your subdomain, project, and space names. Refer [here](http://help.testspace.com/reference:runner-reference#login-credentials) for more details.
+    - `my-org-name.testspace.com/my-project` based on your subdomain, and project names. Refer [here](http://help.testspace.com/reference:runner-reference#login-credentials) for more details.
