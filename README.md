@@ -8,16 +8,16 @@ This sample demonstrates techniques for using Testspace with C# code and the [NU
 ***
 Build using AppVeyor's Online CI:
 
-[![Build status](https://ci.appveyor.com/api/projects/status/78g1co48hr5xq7wd?svg=true)](https://ci.appveyor.com/project/munderseth/csharp-nunit-mffbo)
+[![Build status](https://ci.appveyor.com/api/projects/status/1n2pyp8otedkeebq?svg=true)](https://ci.appveyor.com/project/munderseth/csharp-nunit)
 
 ***
 Publishing **Test Content** using www.testspace.com.
 
-[![Space Health](https://samples.testspace.com/projects/94/spaces/343/badge)](https://samples.testspace.com/projects/94/spaces/343 "Test Cases")
-[![Space Metric](https://samples.testspace.com/projects/94/spaces/343/metrics/217/badge)](https://samples.testspace.com/spaces/343/schema/Code%20Coverage "Code Coverage (branches)")
-[![Space Metric](https://samples.testspace.com/projects/94/spaces/343/metrics/218/badge)](https://samples.testspace.com/spaces/343/schema/Code%20Coverage "Code Coverage (methods)")
-[![Space Metric](https://samples.testspace.com/projects/94/spaces/343/metrics/219/badge)](https://samples.testspace.com/spaces/343/schema/Code%20Coverage "Code Coverage (sequences)")
-[![Space Metric](https://samples.testspace.com/projects/94/spaces/343/metrics/220/badge)](https://samples.testspace.com/spaces/343/schema/Static%20Analysis "Static Analysis (issues)")
+[![Space Health](https://samples.testspace.com/projects/113/spaces/428/badge)](https://samples.testspace.com/projects/113/spaces/428 "Test Cases")
+[![Space Metric](https://samples.testspace.com/projects/113/spaces/428/metrics/228/badge)](https://samples.testspace.com/spaces/428/schema/Code%20Coverage "Code Coverage (branches)")
+[![Space Metric](https://samples.testspace.com/projects/113/spaces/428/metrics/229/badge)](https://samples.testspace.com/spaces/428/schema/Code%20Coverage "Code Coverage (methods)")
+[![Space Metric](https://samples.testspace.com/projects/113/spaces/428/metrics/231/badge)](https://samples.testspace.com/spaces/428/schema/Static%20Analysis "Static Analysis (issues)")
+
 ***
 
 In order to run this sample you will need a host workstation with Visual Studio, the [Nunit](http://nunit.org/) test framework and the [OpenCover](https://github.com/OpenCover/opencover) coverage tool.
@@ -38,7 +38,7 @@ Publishing Test Content using **Testspace**:
 <pre>
 curl -fsS -o testspace-windows.zip https://testspace-client.s3.amazonaws.com/testspace-windows.zip
 7z x -y .\testspace-windows.zip
-estspace publish analysis.xml [Tests]TestResult.xml coverage.xml "master"
+testspace publish analysis.xml [Tests]TestResult.xml coverage.xml "master"
 </pre>
 
 Checkout the [Testspace Project](https://samples.testspace.com/projects/csharp.nunit).
@@ -46,6 +46,6 @@ Checkout the [Testspace Project](https://samples.testspace.com/projects/csharp.n
 To fork this example using AppVeyor requires:
   - Account at www.testspace.com.
   - AppVeyor Environment Variable:
-    - `TESTSPACE_TOKEN` = `credentials:@my-org-name.testspace.com/my-project`
+    - `TESTSPACE_TOKEN` = `credentials@my-org-name.testspace.com/my-project`
     - `credentials` set to `username:password` or your [access token](http://help.testspace.com/using-your-organization:user-settings).
     - `my-org-name.testspace.com/my-project` based on your subdomain, and project names. Refer [here](http://help.testspace.com/reference:runner-reference#login-credentials) for more details.
