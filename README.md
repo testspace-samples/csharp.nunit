@@ -38,14 +38,14 @@ Publishing Test Content using **Testspace**:
 <pre>
 curl -fsS -o testspace-windows.zip https://testspace-client.s3.amazonaws.com/testspace-windows.zip
 7z x -y .\testspace-windows.zip
-testspace publish analysis.xml [Tests]TestResult.xml coverage.xml "master"
+testspace analysis.xml [Tests]TestResult.xml coverage.xml "master"
 </pre>
 
 Checkout the [Testspace Project](https://samples.testspace.com/projects/csharp.nunit).
 
 To fork this example using AppVeyor requires:
   - Account at www.testspace.com.
-  - AppVeyor Environment Variable:
-    - `TESTSPACE_TOKEN` = `credentials@my-org-name.testspace.com/my-project`
+  - AppVeyor CI Environment Variable called **TESTSPACE_TOKEN** required:
+    -  `TESTSPACE_TOKEN` = `credentials@my-org-name.testspace.com/my-project`
     - `credentials` set to `username:password` or your [access token](http://help.testspace.com/using-your-organization:user-settings).
-    - `my-org-name.testspace.com/my-project` based on your subdomain, and project names. Refer [here](http://help.testspace.com/reference:runner-reference#login-credentials) for more details.
+    - `my-org-name.testspace.com/my-project` based on your *subdomain* and *project* names. Refer [here](http://help.testspace.com/reference:runner-reference#login-credentials) for more details. 
