@@ -11,4 +11,4 @@ test_script:
 after_test:
   - curl -fsS -o testspace-windows.zip https://testspace-client.s3.amazonaws.com/testspace-windows.zip 
   - 7z x -y testspace-windows.zip
-  - testspace publish analysis.xml [Tests]TestResult.xml coverage.xml %TESTSPACE_TOKEN%/%APPVEYOR_REPO_BRANCH%#appveyor.build.%APPVEYOR_BUILD_NUMBER%
+  - testspace analysis.xml [Tests]TestResult.xml coverage.xml %TESTSPACE_TOKEN%/%APPVEYOR_REPO_BRANCH%#appveyor.build.%APPVEYOR_BUILD_NUMBER%
