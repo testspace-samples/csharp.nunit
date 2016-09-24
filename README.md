@@ -46,6 +46,6 @@ Checkout the [Testspace Project](https://samples.testspace.com/projects/csharp.n
 To fork this example using AppVeyor requires:
   - Account at www.testspace.com.
   - AppVeyor CI Environment Variable called **TESTSPACE_TOKEN** required:
-    -  `TESTSPACE_TOKEN` = `credentials@my-org-name.testspace.com/my-project`
-    - `credentials` set to `username:password` or your [access token](http://help.testspace.com/using-your-organization:user-settings).
-    - `my-org-name.testspace.com/my-project` based on your *subdomain* and *project* names. Refer [here](http://help.testspace.com/reference:runner-reference#login-credentials) for more details. 
+    - `TESTSPACE_TOKEN` = `credentials@my-org-name.testspace.com/my-project`
+    - `credentials` set to `username:password` or your [access token](http://help.testspace.com/reference:client-reference#login-credentials).
+	- `my-org-name.testspace.com/my-project` based on your *organization* (subdomain) and *project* names. 
