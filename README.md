@@ -7,17 +7,9 @@
 This sample demonstrates techniques for using Testspace with C# code and the [NUnit](http://nunit.org/) test framework, along with the [OpenCover](https://github.com/OpenCover/opencover) coverage tool and [Visual Studio's](https://msdn.microsoft.com/en-us/library/dd264939.aspx) static analysis tool using [NUnit's C# examples](https://github.com/nunit/nunit-csharp-samples).
 
 ***
-Build using AppVeyor's Online CI:
+Example branching only: **development**
 
-[![Build status](https://ci.appveyor.com/api/projects/status/1n2pyp8otedkeebq?svg=true)](https://ci.appveyor.com/project/munderseth/csharp-nunit)
-
-***
-Publishing **Test Content** using www.testspace.com.
-
-[![Space Health](https://samples.testspace.com/projects/168/spaces/822/badge)](https://samples.testspace.com/projects/168/spaces/822 "Test Cases")
-[![Space Metric](https://samples.testspace.com/projects/168/spaces/822/metrics/805/badge)](https://samples.testspace.com/spaces/822/schema/Code%20Coverage "Code Coverage (branches)")
-[![Space Metric](https://samples.testspace.com/projects/168/spaces/822/metrics/806/badge)](https://samples.testspace.com/spaces/822/schema/Code%20Coverage "Code Coverage (methods)")
-[![Space Metric](https://samples.testspace.com/projects/168/spaces/822/metrics/808/badge)](https://samples.testspace.com/spaces/822/schema/Static%20Analysis "Static Analysis (issues)")
+* Reference article: [git branching workflow](https://git-scm.com/book/en/v1/Git-Branching-Branching-Workflows)
 
 ***
 
