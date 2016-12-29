@@ -1,0 +1,3 @@
+analysis.xml
+[Tests]TestResult.xml 
+coverage.xml

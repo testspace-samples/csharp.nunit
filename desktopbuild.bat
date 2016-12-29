@@ -10,4 +10,5 @@ curl -fsS -o testspace-windows.zip https://testspace-client.s3.amazonaws.com/tes
 7z x -y .\testspace-windows.zip
 del testspace-windows.zip
 
-testspace publish analysis.xml [Tests]TestResult.xml coverage.xml "master.desktop"
+for /f %%i in ('git symbolic-ref --short HEAD') do set BRANCH_NAME=%%i
+testspace @.testspace.txt %TESTSPACE_TOKEN%/testspace-samples:csharp.nunit/%BRANCH_NAME%#desktop.Build
