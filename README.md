@@ -7,7 +7,7 @@
 This sample demonstrates techniques for using Testspace with C# code and the [NUnit](http://nunit.org/) test framework, along with the [OpenCover](https://github.com/OpenCover/opencover) coverage tool and [Visual Studio's](https://msdn.microsoft.com/en-us/library/dd264939.aspx) static analysis tool using [NUnit's C# examples](https://github.com/nunit/nunit-csharp-samples).
 
 ***
-Example branching only: **development**
+Example branching only: **topic**
 
 * Reference article: [git branching workflow](https://git-scm.com/book/en/v1/Git-Branching-Branching-Workflows)
 
