@@ -5,7 +5,8 @@ REM "install"
 wget -q https://testspace-client.s3.amazonaws.com/testspace-windows.zip
 7z x -y testspace-windows.zip
 del testspace-windows.zip
-SET CI=true & testspace config url samples.testspace.com
+REM host requires "access token", storing in Windows "Control Panel" refer to https://help.testspace.com/reference:client-reference#login-credentials)
+testspace config url samples.testspace.com CI=true
 testspace -v
 
 REM "before_script"
