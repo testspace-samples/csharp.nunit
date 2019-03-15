@@ -9,9 +9,9 @@ install:
 
 build_script:
    - nuget restore money/cs-money.sln
+   - msbuild money/cs-money.csproj /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" /p:runCodeAnalysis=true /p:codeanalysislogfile=..\analysis.xml
 
 test_script:
-   - msbuild money/cs-money.csproj /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" /p:runCodeAnalysis=true /p:codeanalysislogfile=..\analysis.xml
    - .\money\packages\OpenCover.4.6.519\tools\OpenCover.Console -target:".\money\packages\NUnit.ConsoleRunner.3.4.1\tools\nunit3-console.exe" -targetargs:"money\bin\Debug\cs-money.dll" -output:"coverage.xml" -filter:"+[*]* -[*]*MoneyTest*" -register:user
 
 after_test:
