@@ -1,0 +1,25 @@
+jobs:
+- job: Windows
+  pool:
+    vmImage: 'vs2015-win2012r2'
+  steps:
+  - bash: |
+      curl -OsSL https://testspace-client.s3.amazonaws.com/testspace-windows.zip
+      unzip -q testspace-windows.zip
+      ./testspace config url samples.testspace.com
+      ./testspace -v
+    displayName: 'Setup'
+  - task: VSBuild@1
+    inputs:
+      solution: 'money\cs-money.sln'
+      vsVersion: '10.0' # Optional. Options: latest, 15.0, 14.0, 12.0, 11.0
+      configuration: Debug
+      restoreNugetPackages: true
+      msbuildArgs: '/p:runCodeAnalysis=true /p:codeanalysislogfile=..\analysis.xml'
+  - script: |
+      .\money\packages\OpenCover.4.6.519\tools\OpenCover.Console -target:".\money\packages\NUnit.ConsoleRunner.3.4.1\tools\nunit3-console.exe" -targetargs:"money\bin\Debug\cs-money.dll" -output:"coverage.xml" -filter:"+[*]* -[*]*MoneyTest*" -register:user
+    displayName: 'Test'
+  - script: |
+      testspace analysis.xml [Tests]TestResult.xml coverage.xml
+    condition: always()
+    displayName: 'Push'
