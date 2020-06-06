@@ -1,7 +1,7 @@
 jobs:
 - job: Windows
   pool:
-    vmImage: 'vs2015-win2012r2'
+    vmImage: vs2017-win2016
   steps:
   - bash: |
       curl -OsSL https://testspace-client.s3.amazonaws.com/testspace-windows.zip
@@ -12,7 +12,7 @@ jobs:
   - task: VSBuild@1
     inputs:
       solution: 'money\cs-money.sln'
-      vsVersion: '10.0' # Optional. Options: latest, 15.0, 14.0, 12.0, 11.0
+      vsVersion: '14.0' # Optional. Options: latest, 15.0, 14.0, 12.0, 11.0
       configuration: Debug
       restoreNugetPackages: true
       msbuildArgs: '/p:runCodeAnalysis=true /p:codeanalysislogfile=..\analysis.xml'
