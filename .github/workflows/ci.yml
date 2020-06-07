@@ -1,0 +1,32 @@
+name: Default
+on: 
+  push:
+  schedule:
+    - cron:  '0 1 * * 6'
+
+jobs:
+  build:
+    runs-on: windows-2019
+    steps:
+      - uses: nuget/setup-nuget@v1
+      - uses: microsoft/setup-msbuild@v1.0.0
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 50
+      - name: Setup
+        run: |
+          Invoke-WebRequest https://testspace-client.s3.amazonaws.com/testspace-windows.zip -outfile testspace-windows.zip
+          Expand-Archive -LiteralPath testspace-windows.zip -DestinationPath ./ -Force
+          ./testspace config url samples.testspace.com
+          ./testspace -v
+      - name: Build
+        run: |
+          nuget restore money/cs-money.sln
+          msbuild money/cs-money.csproj /p:Configuration=Debug /p:runCodeAnalysis=true /p:codeanalysislogfile=..\analysis.xml
+      - name: Test
+        run: |
+          .\money\packages\OpenCover.4.6.519\tools\OpenCover.Console -target:".\money\packages\NUnit.ConsoleRunner.3.4.1\tools\nunit3-console.exe" -targetargs:"money\bin\Debug\cs-money.dll" -output:"coverage.xml" -filter:"+[*]* -[*]*MoneyTest*" -register:user
+      - name: Push
+        run: |
+          ./testspace analysis.xml [Tests]TestResult.xml coverage.xml
+        if: always()
