@@ -1,4 +1,4 @@
-name: Default
+name: Build
 on: 
   push:
   schedule:
@@ -13,12 +13,9 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 50
-      - name: Setup
-        run: |
-          Invoke-WebRequest https://testspace-client.s3.amazonaws.com/testspace-windows.zip -outfile testspace-windows.zip
-          Expand-Archive -LiteralPath testspace-windows.zip -DestinationPath ./ -Force
-          ./testspace config url samples.testspace.com
-          ./testspace -v
+      - uses: testspace-com/setup-testspace@v1
+        with:
+          domain: samples 
       - name: Build
         run: |
           nuget restore money/cs-money.sln
@@ -28,5 +25,5 @@ jobs:
           .\money\packages\OpenCover.4.6.519\tools\OpenCover.Console -target:".\money\packages\NUnit.ConsoleRunner.3.4.1\tools\nunit3-console.exe" -targetargs:"money\bin\Debug\cs-money.dll" -output:"coverage.xml" -filter:"+[*]* -[*]*MoneyTest*" -register:user
       - name: Push
         run: |
-          ./testspace analysis.xml [Tests]TestResult.xml coverage.xml
+          testspace analysis.xml [Tests]TestResult.xml coverage.xml
         if: always()
