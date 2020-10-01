@@ -14,7 +14,7 @@ This sample demonstrates techniques for using Testspace with C# code and the [NU
 ***
 Using CI Services:
 
-![Default](https://github.com/testspace-samples/csharp.nunit/workflows/Default/badge.svg?branch=master) [![Build Status](https://dev.azure.com/testspace-samples/csharp.nunit/_apis/build/status/testspace-samples.csharp.nunit?branchName=master)](https://dev.azure.com/testspace-samples/csharp.nunit/_build/latest?definitionId=3&branchName=master) [![Build status](https://ci.appveyor.com/api/projects/status/ar9a03m96h210kil/branch/master?svg=true)](https://ci.appveyor.com/project/Testspace-samples/csharp-nunit/branch/master)
+![Build](https://github.com/testspace-samples/csharp.nunit/workflows/Build/badge.svg?branch=master) [![Build Status](https://dev.azure.com/testspace-samples/csharp.nunit/_apis/build/status/testspace-samples.csharp.nunit?branchName=master)](https://dev.azure.com/testspace-samples/csharp.nunit/_build/latest?definitionId=3&branchName=master) [![Build status](https://ci.appveyor.com/api/projects/status/ar9a03m96h210kil/branch/master?svg=true)](https://ci.appveyor.com/project/Testspace-samples/csharp-nunit/branch/master)
 
 ***
 Publishing **Test Content** using www.testspace.com.
