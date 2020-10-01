@@ -1,4 +1,4 @@
-[![Testspace](https://www.testspace.com/img/Testspace.png)](http://www.testspace.com)
+[![Testspace](https://www.testspace.com/img/Testspace.png)](https://www.testspace.com)
 
 ***
 
@@ -8,13 +8,13 @@ This sample demonstrates techniques for using Testspace with C# code and the [NU
 
   * Using a Testspace Project that is `connected` with this GitHub Repo
   * Using 1 Online CI services for demonstration purposes only
-  * Can review the Results at [testspace-samples:csharp.nunit](https://samples.testspace.com/projects/testspace-samples:charp.nunit)  
-  * Refer to our [Getting Started](https://help.testspace.com/getting-started) help articles for more information
+  * Can review the Results at [testspace-samples:csharp.nunit](https://samples.testspace.com/projects/testspace-samples:csharp.nunit)  
+  * Refer to our [Help](https://help.testspace.com/) for more information
 
 ***
 Using CI Services:
 
-[![Build status](https://ci.appveyor.com/api/projects/status/ar9a03m96h210kil/branch/master?svg=true)](https://ci.appveyor.com/project/Testspace-samples/csharp-nunit/branch/master)
+![Default](https://github.com/testspace-samples/csharp.nunit/workflows/Default/badge.svg?branch=master) [![Build Status](https://dev.azure.com/testspace-samples/csharp.nunit/_apis/build/status/testspace-samples.csharp.nunit?branchName=master)](https://dev.azure.com/testspace-samples/csharp.nunit/_build/latest?definitionId=3&branchName=master) [![Build status](https://ci.appveyor.com/api/projects/status/ar9a03m96h210kil/branch/master?svg=true)](https://ci.appveyor.com/project/Testspace-samples/csharp-nunit/branch/master)
 
 ***
 Publishing **Test Content** using www.testspace.com.
