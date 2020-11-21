@@ -9,7 +9,7 @@ jobs:
     runs-on: windows-2019
     steps:
       - uses: nuget/setup-nuget@v1
-      - uses: microsoft/setup-msbuild@v1.0.0
+      - uses: microsoft/setup-msbuild@v1
       - uses: actions/checkout@v2
         with:
           fetch-depth: 50
