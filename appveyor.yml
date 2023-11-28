@@ -12,7 +12,7 @@ build_script:
    - msbuild money/cs-money.csproj /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" /p:runCodeAnalysis=true /p:codeanalysislogfile=..\analysis.xml
 
 test_script:
-   - .\money\packages\OpenCover.4.7.1221\tools\OpenCover.Console -target:".\money\packages\NUnit.ConsoleRunner.3.13.2\tools\nunit3-console.exe" -targetargs:"money\bin\Debug\cs-money.dll" -output:"coverage.xml" -filter:"+[*]* -[*]*MoneyTest*" -register:user
+   - .\money\packages\OpenCover.4.7.1221\tools\OpenCover.Console -target:".\money\packages\NUnit.ConsoleRunner.3.16.3\tools\nunit3-console.exe" -targetargs:"money\bin\Debug\cs-money.dll" -output:"coverage.xml" -filter:"+[*]* -[*]*MoneyTest*" -register:user
 
 after_test:
    - testspace analysis.xml [Tests]TestResult.xml coverage.xml
