@@ -8,9 +8,9 @@ jobs:
   build:
     runs-on: windows-2019
     steps:
-      - uses: nuget/setup-nuget@v1
-      - uses: microsoft/setup-msbuild@v1
-      - uses: actions/checkout@v3
+      - uses: nuget/setup-nuget@v2
+      - uses: microsoft/setup-msbuild@v2
+      - uses: actions/checkout@v4
       - uses: testspace-com/setup-testspace@v1
         with:
           domain: samples
